@@ -31,7 +31,7 @@ When returning from a pjax request we only want the body returned and not the te
 
 ### Controller
 
-In your controller, add the `PjaxAttribute` to the class or action method. This will setup your controller to receive and send pjax. You controller must also implement `IPjax`.
+In your controller, add the `PjaxAttribute` to the class or action method. This will setup your controller to receive and send pjax. Your controller must also implement `IPjax`.
 
 ```c#
 [Pjax]
