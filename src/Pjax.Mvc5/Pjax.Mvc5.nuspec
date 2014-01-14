@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Pjax.Mvc5</id>
+    <version>0.1.0</version>
+    <authors>Josh Close</authors>
+    <licenseUrl>http://www.opensource.org/licenses/ms-pl.html</licenseUrl>
+    <projectUrl>https://github.com/JoshClose/Pjax.Mvc</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library to integrate ASP.NET MVC with jQuery.pjax.</description>
+    <tags>ASP.NET MVC PJAX</tags>
+    <releaseNotes>
+	</releaseNotes>
+  </metadata>
+</package>
