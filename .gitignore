@@ -1,0 +1,7 @@
+*_ReSharper*
+*.user
+*.suo
+*[Bb]in/
+*[Oo]bj/
+*[Dd]ebug/
+packages/
