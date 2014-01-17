@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Pjax.Mvc5")]
+[assembly: AssemblyTitle("Pjax.Mvc3")]
 [assembly: AssemblyDescription( "Pjax.Mvc is a library to integrate ASP.NET MVC with jQuery.pjax." )]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Josh Close")]
-[assembly: AssemblyProduct("Pjax.Mvc5")]
+[assembly: AssemblyProduct("Pjax.Mvc3")]
 [assembly: AssemblyCopyright("Copyright © Josh Close 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("74ff3630-e364-4f63-b62f-848498026895")]
+[assembly: Guid("41e7599b-e8c8-4a50-910c-29a28024c31d")]
 
 // Version information for an assembly consists of the following four values:
 //

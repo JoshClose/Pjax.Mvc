@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-		<id>Pjax.Mvc5</id>
+		<id>Pjax.Mvc3</id>
 		<version>0.1.1</version>
 		<authors>Josh Close</authors>
 		<licenseUrl>http://www.opensource.org/licenses/ms-pl.html</licenseUrl>
@@ -12,10 +12,10 @@
 		<releaseNotes>
 		</releaseNotes>
 		<dependencies>
-			<dependency id="Microsoft.AspNet.Mvc" version="5.0.0" />
+			<dependency id="Microsoft.AspNet.Mvc" version="3.0.0" />
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="bin\Release\Pjax*.*" target="lib\net45\" />
+		<file src="bin\Release\Pjax*.*" target="lib\net40\" />
 	</files>
 </package>
