@@ -6,8 +6,20 @@ Pjax.Mvc is a library to integrate ASP.NET MVC with [jQuery.pjax](https://github
 
 To install Pjax.Mvc, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
+
+MVC 5
 ```
 PM> Install-Package Pjax.Mvc5
+```
+
+MVC 4
+```
+PM> Install-Package Pjax.Mvc4
+```
+
+MVC 3
+```
+PM> Install-Package Pjax.Mvc3
 ```
 
 ## Setup
@@ -31,7 +43,7 @@ When returning from a pjax request we only want the body returned and not the te
 
 ### Controller
 
-In your controller, add the `PjaxAttribute` to the class or action method. This will setup your controller to receive and send pjax. You controller must also implement `IPjax`.
+In your controller, add the `PjaxAttribute` to the class or action method. This will setup your controller to receive and send pjax. Your controller must also implement `IPjax`.
 
 ```c#
 [Pjax]
