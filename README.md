@@ -31,7 +31,7 @@ After the install is complete, you will need to make a few changes to get it wor
 When returning from a pjax request we only want the body returned and not the template. Add this at the beginning of your layout.
 
 ```aspx-cs
-@if( ViewBag.IsPjaxRequest )
+@if( ViewBag.IsPjaxRequest ?? false )
 {
 	<title>@ViewBag.Title</title>
 	@RenderBody()
