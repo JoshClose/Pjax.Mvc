@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pjax.Mvc5", "Pjax.Mvc5\Pjax.Mvc5.csproj", "{D19580C7-41BC-4C45-AD07-E270A1A80BCB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B7D7BF01-C5BF-47A4-91DD-3195C028B68E}"
@@ -13,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pjax.Mvc4", "Pjax.Mvc4\Pjax.Mvc4.csproj", "{353DF0BA-FBCF-47C9-8C22-04C8F981E0E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pjax.Mvc3", "Pjax.Mvc3\Pjax.Mvc3.csproj", "{8DFBC0F6-3925-4B7F-A350-59F744A048A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{6DC384D8-3F29-4A11-B366-CEC018271E20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,10 @@ Global
 		{8DFBC0F6-3925-4B7F-A350-59F744A048A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DFBC0F6-3925-4B7F-A350-59F744A048A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DFBC0F6-3925-4B7F-A350-59F744A048A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
