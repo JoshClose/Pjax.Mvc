@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pjax.Mvc5", "Pjax.Mvc5\Pjax.Mvc5.csproj", "{D19580C7-41BC-4C45-AD07-E270A1A80BCB}"
 EndProject
@@ -17,6 +17,20 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pjax.Mvc3", "Pjax.Mvc3\Pjax.Mvc3.csproj", "{8DFBC0F6-3925-4B7F-A350-59F744A048A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{6DC384D8-3F29-4A11-B366-CEC018271E20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetCoreExample", "AspnetCoreExample\AspnetCoreExample.csproj", "{FD4E6F65-3764-4293-A191-75915C1BDE9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pjax.MvcCore", "Pjax.MvcCore\Pjax.MvcCore.csproj", "{250E7C40-E7E9-46AF-A1F5-8DFD27DCF873}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DC263F6-305A-4514-A541-81810FEFE180}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE.txt = ..\LICENSE.txt
+		..\Pack NuGet Packages Core.bat = ..\Pack NuGet Packages Core.bat
+		..\Pack NuGet Packages.bat = ..\Pack NuGet Packages.bat
+		..\Push NuGet Packages.bat = ..\Push NuGet Packages.bat
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,8 +54,19 @@ Global
 		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC384D8-3F29-4A11-B366-CEC018271E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4E6F65-3764-4293-A191-75915C1BDE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4E6F65-3764-4293-A191-75915C1BDE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4E6F65-3764-4293-A191-75915C1BDE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4E6F65-3764-4293-A191-75915C1BDE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250E7C40-E7E9-46AF-A1F5-8DFD27DCF873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250E7C40-E7E9-46AF-A1F5-8DFD27DCF873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250E7C40-E7E9-46AF-A1F5-8DFD27DCF873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250E7C40-E7E9-46AF-A1F5-8DFD27DCF873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBB75429-41F2-4A03-AC64-7FA340A2520B}
 	EndGlobalSection
 EndGlobal
