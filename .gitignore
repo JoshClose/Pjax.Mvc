@@ -6,3 +6,4 @@
 *[Dd]ebug/
 packages/
 NuGet/
+.vs/
