@@ -5,3 +5,10 @@
 
 var pjax = new Pjax({
 });
+
+function handlePjaxComplete(e) {
+	console.log("handlePjaxComplete", e);
+	//pjax.reload();
+}
+
+document.addEventListener("pjax:complete", handlePjaxComplete);

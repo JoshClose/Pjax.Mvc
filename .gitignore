@@ -7,3 +7,4 @@
 packages/
 NuGet/
 .vs/
+node_modules/

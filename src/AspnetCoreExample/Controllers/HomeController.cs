@@ -44,5 +44,16 @@ namespace AspnetCoreExample.Controllers
 		{
 			return RedirectToAction(nameof(Index));
 		}
+
+		public IActionResult React()
+		{
+			ViewBag.Items = new List<object>
+			{
+				new { Name = "One", IsSelected = true },
+				new { Name = "Two", IsSelected = false },
+			};
+
+			return View();
+		}
 	}
 }

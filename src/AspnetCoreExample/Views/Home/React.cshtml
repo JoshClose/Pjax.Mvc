@@ -1,0 +1,22 @@
+﻿@{
+	ViewBag.Title = "React Client Rendered Example";
+	var data = new
+	{
+		Title = ViewBag.Title,
+		Items = ViewBag.Items
+	};
+}
+<div id="root"></div>
+@section Scripts {
+	<script>
+		window.initialData = @Json.Serialize(data);
+	</script>
+
+	<environment include="Development">
+		<script src="~/dist/js/react-example.js" asp-append-version="true"></script>
+	</environment>
+
+	<environment exclude="Development">
+		<script src="~/dist/js/react-example.min.js" asp-append-version="true"></script>
+	</environment>
+}
