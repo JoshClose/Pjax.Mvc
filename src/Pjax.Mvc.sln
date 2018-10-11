@@ -28,6 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\LICENSE.txt = ..\LICENSE.txt
 		..\Pack NuGet Packages Core.bat = ..\Pack NuGet Packages Core.bat
 		..\Pack NuGet Packages.bat = ..\Pack NuGet Packages.bat
+		..\Push NuGet Packages Core.bat = ..\Push NuGet Packages Core.bat
 		..\Push NuGet Packages.bat = ..\Push NuGet Packages.bat
 		..\README.md = ..\README.md
 	EndProjectSection

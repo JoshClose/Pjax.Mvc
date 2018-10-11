@@ -1,11 +1,88 @@
 # Pjax.Mvc
 
-Pjax.Mvc is a library to integrate ASP.NET MVC with [jQuery.pjax](https://github.com/defunkt/jquery-pjax).
+Pjax.Mvc is a library to integrate ASP.NET MVC with a client side PJAX library. MVC Core integrates with 
+[MoOx/pjax](https://github.com/MoOx/pjax) which doesn't require jQuery, and MVC 5/4/3 integrates with 
+[jQuery.pjax](https://github.com/defunkt/jquery-pjax).
 
-## Installation
+## ASP.NET MVC Core
+
+The MVC Core integration is implemented as middleware. The middleware will take the page generated from
+Razor and create a new page that only contains the sections that the PJAX request selectors asked for.
+The middleware will only run if the request is a PJAX request.
+
+### Installation
 
 To install Pjax.Mvc, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
+```
+PM> Install-Package Pjax.MvcCore
+```
+
+### Setup
+
+Register the middleware in `Configure` of your `Startup.cs` file.
+
+```cs
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+	if (env.IsDevelopment())
+	{
+		app.UseDeveloperExceptionPage();
+	}
+	else
+	{
+		app.UseExceptionHandler("/Home/Error");
+		app.UseHsts();
+	}
+
+	app.UseHttpsRedirection();
+	app.UseStaticFiles();
+	app.UseCookiePolicy();
+
+	// Register Pjax.Mvc
+	app.UsePjax();
+
+	app.UseMvc(routes =>
+	{
+		routes.MapRoute(
+			name: "default",
+			template: "{controller=Home}/{action=Index}/{id?}");
+	});
+
+}
+```
+
+### Configuration
+
+You shouldn't ever need to use this, but you can change the name of the headers that Pjax.Mvc is looking for.
+
+Set options in the `ConfigureServices` method of your `Startup.cs` file.
+
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+	services.Configure<CookiePolicyOptions>(options =>
+	{
+		// This lambda determines whether user consent for non-essential cookies is needed for a given request.
+		options.CheckConsentNeeded = context => true;
+		options.MinimumSameSitePolicy = SameSiteMode.None;
+	});
+
+	// Configure Pjax.MVC.
+	services.Configure<PjaxOptions>(options =>
+	{
+		options.PjaxHeader = "X-PJAX";
+	});
+
+	services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+}
+```
+
+## ASP.NET MVC 5/4/3
+
+### Installation
+
+To install Pjax.Mvc, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
 MVC 5
 ```
@@ -22,11 +99,11 @@ MVC 3
 PM> Install-Package Pjax.Mvc3
 ```
 
-## Setup
+### Setup
 
 After the install is complete, you will need to make a few changes to get it working.
 
-### Layout
+#### Layout
 
 When returning from a pjax request we only want the body returned and not the template. Add this at the beginning of your layout.
 
@@ -41,7 +118,7 @@ When returning from a pjax request we only want the body returned and not the te
 ...
 ```
 
-### Controller
+#### Controller
 
 In your controller, add the `PjaxAttribute` to the class or action method. This will setup your controller to receive and send pjax. Your controller must also implement `IPjax`.
 
@@ -56,11 +133,11 @@ public abstract class ControllerBase : Controller, IPjax
 
 Your site is now ready to receive and send pjax calls.
 
-## API
+### API
 
-### Controller Extensions
+#### Controller Extensions
 
-#### PjaxFullLoad
+##### PjaxFullLoad
 
 If you need a response to do a full page load instead of a pjax load, call `PjaxFullLoad` in your action.
 
@@ -79,7 +156,7 @@ public ActionResult Logout()
 
 This will cause the following page to be a full page load, so any user information that was shown on the screen in the layout can be hidden.
 
-## License
+### License
 
 Microsoft Public License (MS-PL)
 
