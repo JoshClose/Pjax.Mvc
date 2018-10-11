@@ -94,6 +94,7 @@ namespace Pjax.MvcCore
 				foreach (var section in pjaxSections)
 				{
 					section.ToHtml(writer);
+					writer.WriteLine();
 				}
 
 				return writer.ToString();
