@@ -2,7 +2,7 @@
 
 Pjax.Mvc is a library to integrate ASP.NET MVC with a client side PJAX library. MVC Core integrates with 
 [MoOx/pjax](https://github.com/MoOx/pjax) which doesn't require jQuery, and MVC 5/4/3 integrates with 
-[jQuery.pjax](https://github.com/defunkt/jquery-pjax).
+[jQuery.pjax](https://github.com/defunkt/jquery-pjax). **Note: This library is only the server side implementation. MoOx/Pjax or jquery-pjax are still required for this to work.**
 
 ## ASP.NET MVC Core
 
