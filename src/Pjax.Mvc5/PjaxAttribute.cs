@@ -38,8 +38,8 @@ namespace Pjax.Mvc5
 
 			if( !filterContext.HttpContext.Response.Headers.AllKeys.Any( k => k.ToUpper() == Constants.PjaxUrl ) )
 			{
-				var url = filterContext.HttpContext.Request.Url.ToString();
-				filterContext.HttpContext.Response.AddHeader( Constants.PjaxUrl, url );
+			    var url = Uri.EscapeUriString(filterContext.HttpContext.Request.Url.ToString());
+                filterContext.HttpContext.Response.AddHeader( Constants.PjaxUrl, url );
 			}
 
 			if( !filterContext.HttpContext.Response.Headers.AllKeys.Any( k => k.ToUpper() == Constants.PjaxVersion ) )
